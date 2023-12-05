@@ -9,7 +9,7 @@ institution:
     url: https://www.cmu.edu/
 
 links:
-  Email:    "quantinx@andrew.cmu.edu"
+  Email:    "mailto:quantinx@andrew.cmu.edu"
   CV:       "assets/Resume.pdf"
   Github:   "https://github.com/quantingxie"
   Scholar:  "https://scholar.google.com/citations?user=rGYXRkkAAAAJ&hl=en"
