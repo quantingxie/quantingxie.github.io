@@ -92,7 +92,7 @@
     <div class="col-12 mx-auto pt-5">
       <p class="lead">
         Hi! My name is Quanting Xie <a href="https://translate.google.com/?sl=en&tl=zh-CN&text=Quan-Ting%20Xie&op=translate"><i class="fa fa-volume-up"></i></a>.
-        I'm a Master student at <a href="https://www.cmu.edu/">CMU</a> advised by Prof. <a href="https://yonatanbisk.com/"></a>Yonatan Bisk and Prof. <a href="https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/">Matthew Johnson-Roberson</a>.
+        I'm a Master student at <a href="https://www.cmu.edu/">CMU</a> advised by Prof. <a href="https://yonatanbisk.com/">Yonatan Bisk</a> and Prof. <a href="https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/">Matthew Johnson-Roberson</a>.
         I'm interested in developing tasks and robotic hardwares that neccestate us to get Embodied Intelligence, and grounding Foundatino Models though the interaction with the environment with those more realistic tasks and harwares.
         I do electronic design and embedded system development for robots as well.<br/><br/>
         I'm looking for all kinds of research opportunities and collaborations.
@@ -336,91 +336,6 @@
 </section>
 
 
-<section class="container">
-  <hr>
-  <a class="anchor" id="publications"></a>
-  <div class="row mx-auto">
-    <h1 class="col-12 px-0 mb-0">More Research & Projects</h1>
-    {% assign sorted = site.moreresearch | sort: 'year' | reverse %}
-    {% for pub in sorted %}
-    <div class="row each_pub" style="margin-bottom: 20px;">
-      <!-- <div class="d-none d-md-block col-md-4 d-lg-block col-lg-4 pub-thumbnail" style="min-height: 100px"> -->
-        <div class="d-none d-md-block col-md-5 d-lg-block col-lg-5" style="min-height: 100px">
-          <a href="{{ pub.url }}">
-        {% if pub.thumb_width %}
-        <img class="img-fluid px-0.5 py-0.5 center-thumb" width="{{ pub.thumb_width }}%" style="margin:0 auto; max-width: 100%; border: none" src="{{ pub.thumbnail }}">
-        {% else %}
-        <img class="img-fluid px-0.5 py-0.5 center-thumb" src="{{ pub.thumbnail }}">
-        {% endif %}
-        </a>
-      </div>
-      <div class="col-lg-7 col-md-7 col-sm-12 pl-4">
-        <div class="center-thumb">
-        <a href="{{ pub.url }}"><p class="pub_title">{{ pub.title }}</p></a>
-        <p class="pub_author">
-          {% for author in pub.authors %}
-            {% if author.first %}
-              {% assign author2 = author[0] %}
-              {% assign extra = author[1] %}
-            {% else %}
-              {% assign author2 = author %}
-              {% assign extra = "" %}
-            {% endif %}
-
-            {% assign author_info = site.data.people[author2] %}
-            {% if author_info %}
-              {% if author_info.website and author2 == "Me"%}
-                <a style="color:#063d96" href="{{ author_info.website }}"><b>{{ author_info.name }}</b></a>
-              {% elsif author_info.website%}
-              <a style="color:#063d96" href="{{ author_info.website }}">{{ author_info.name }}</a>
-                {% else %}
-                {% if author2 == "Me" %}<b>{% endif %}{{ author_info.name }}{% if author2 == "Me" %}</b>{% endif %}
-              {% endif %}
-            {% else %}
-              {{ author2 }}
-            {% endif %}
-            {{ extra }}{% if forloop.last == false %},&nbsp{% endif %}
-          {% endfor %}
-        </p>
-        <p class="pub_venue">{{ pub.venue }}</p>
-        <p class="pub_supplemental">
-          {% assign hasbib = False %}
-          {% for link in pub.links %}
-            {% if link[0] == "bibtex" %}
-              {% assign hasbib = True %} <!-- Bibtext -->
-              <a class="button button-{{link[0]}}" data-toggle="collapse" href="#collapse{{ pub.id }}" role="button" aria-expanded="false" aria-controls="collapse{{ pub.id }}">
-                {{ link[0] }}
-              </a>
-            {% elsif link[0] == "pdf" %}
-            {% else %} <!-- Other links -->
-              <a class="button button-{{link[0]}}" href="{{ link[1] }}" target="_blank">
-                {{ link[0] }}
-              </a>
-            {% endif %}
-          {% endfor %}
-          {% if pub.highlight %}
-          <a class="pub_highlight">{{ pub.highlight }}</a>
-          {% endif %}
-          <!-- Add bitext content -->
-          {% if hasbib == True %}
-          <div class="collapse" id="collapse{{ pub.id }}">
-            <div class="card card-body">
-              <embed type="text/html" src="{{ pub.links.bibtex }}">
-            </div>
-          </div>
-          {% endif %}
-          <!--No links-->
-          {% if pub.links %}
-          {% else %}
-          <a class="button button-empty" target="_blank">Content coming soon!</a>
-          {% endif %}
-        </p>  
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
 
 
 <section class="container">
@@ -434,7 +349,7 @@
 </div>
 
 <div style="display: flex; align-items: center;margin-bottom: 9px;">
-  <img src="assets/images/rpi.png" alt="Image" style="width: 40px; margin-right: 10px;" >
+  <img src="assets/images/rpi.jpeg" alt="Image" style="width: 40px; margin-right: 10px;" >
   <div style="display: inline; flex-direction: column; justify-content: center;line-height: 1;">
 	<span style="font-size: 14px;">B.S. in Mechanical Engineering Rensselaer Polytechnic Institute(RPI)</span><br/>
     <span style="font-size: 12px;">4 year Dean's honor list, Mane Innovation Award.)</span></div> 
