@@ -1,18 +1,49 @@
 ---
 id:             2023-neuralsea
-title:          "Beyond NeRF Underwater: Learning Neural Reflectance Fields for True Color Correction of Marine Imagery"
+title:          "Foundation Models for Robotics: Current Status and a Peek at the Future"
 authors:
     - Me
+    - Yafei
+    - Vidhi
+    - Jay
+    - Nikhil
+    - Jon
+    - Yaqi
+    - Seungchan
+    - Tianyi
+    - Shibo
+    - Yu-Quan
+    - Zslot
+    - Dhruv
+    - Xiaolong
+    - Chen
     - MJR
+    - Katia
+    - Basti
+    - Fei
+    - Yonatan
+
 venue:          In Submission.
-year:           "2023-05"
-thumbnail:      assets/publications/2023-neuralsea/neuralsea.png
+year:           "2023-12"
+thumbnail:      assets/publications/2023-Survey/scope.png
 links:
     paper:      https://arxiv.org/abs/2304.03384
-    code:       https://github.com/tyz1030/neuralsea
-    bibtex:     assets/publications/2023-neuralsea/ref.txt
+    code:       https://github.com/JeffreyYH/foundation-models-robotics-survey
+    bibtex:     assets/publications/2023-Survey/ref.txt
 
 layout: project
-short_title: Learning Neural Reflectance Fields for True Color Correction of Underwater Imagery
-abstract: "Underwater imagery often exhibits distorted coloration as a result of light-water interactions, which complicates the study of benthic environments in marine biology and geography. In this research, we propose an algorithm to restore the true color (albedo) in underwater imagery by jointly learning the effects of the medium and neural scene representations. Our approach models water effects as a combination of light attenuation with distance and backscattered light. The proposed neural scene representation is based on a neural reflectance field model, which learns albedos, normals, and volume densities of the underwater environment. We introduce a logistic regression model to separate water from the scene and apply distinct light physics during training. Our method avoids the need to estimate complex backscatter effects in water by employing several approximations, enhancing sampling efficiency and numerical stability during training. The proposed technique integrates underwater light effects into a volume rendering framework with end-to-end differentiability. Experimental results on both synthetic and real-world data demonstrate that our method effectively restores true color from underwater imagery, outperforming existing approaches in terms of color consistency."
+short_title: Foundation Models for Robotics
+abstract: "Building general-purpose robots that can operate seamlessly, in any environment, with any objects, and utilizing various
+skills to complete diverse tasks has been a long-standing goal in Artificial Intelligence. Unfortunately, however, most existing
+robotic systems have been constrained—having been trained on specific datasets, for specific tasks, and within specific envi-
+ronments. These systems usually require extensively-labeled data, rely on task-specific models, have numerous generalization
+issues when deployed in real-world scenarios, and struggle to remain robust to distribution shifts. Motivated by the impressive
+open-set performance and content generation capabilities of web-scale, large-capacity pre-trained models (i.e., foundation
+models) in research fields such as Natural Language Processing (NLP) and Computer Vision (CV), we devote this survey to
+exploring (i) how these existing foundation models from NLP and CV can be applied to the field of Robotics, and also exploring
+(ii) what a robotics-specific foundation model (henceforth, robotics foundation model) would look like. We begin by providing
+an overview of what constitutes a conventional robotic system and the fundamental barriers to making it universally applicable.
+Next, we establish a taxonomy to discuss current work exploring ways to leverage existing foundation models for Robotics and
+develop new ones catered to Robotics. Finally, we discuss key challenges and promising future directions in using foundation
+models for enabling universally-applicable robotic systems"
 ---

@@ -1,20 +1,22 @@
 ---
 id:             2023-bestllmnav
-title:          "Reasoning is better than Semantic Searching"
+title:          "Reasoning about the Unseen for Efficient Outdoor Object Navigation"
+
 authors:
     - Me
-    - Ybisk
+    - Tianyi
+    - Kedi
     - MJR
-    -
-venue:          RA-L + ICRA, 2023.
-year:           "2023-07"
-thumbnail:      assets/publications/2023-bestllmnav/croscarep.png
+    - Yonatan
+venue:          Submitted for ICRA, 2024.
+year:           "2023-09"
+thumbnail:      assets/publications/2023-bestllmnav/bestllmnav.png
 links:
-    paper:      https://arxiv.org/abs/2109.04087
-    code:       https://github.com/tyz1030/CroScaleRep
+    paper:      https://arxiv.org/abs/2309.10103v1
+    code:       https://github.com/quantingxie/reasonedexplorer
     bibtex:     assets/publications/2022-croscarep/ref.txt
 
 layout: project
-short_title: Learning Cross-Scale Visual Representations for Geo-Localization
-abstract: "Robot localization remains a challenging task in GPS denied environments. State estimation approaches based on local sensors, e.g. cameras or IMUs, are drifting-prone for long-range missions as error accumulates. In this study, we aim to address this problem by localizing image observations in a 2D multi-modal geospatial map. We introduce the cross-scale dataset and a methodology to produce additional data from cross-modality sources. We propose a framework that learns cross-scale visual representations without supervision. Experiments are conducted on data from two different domains, underwater and aerial. In contrast to existing studies in cross-view image geo-localization, our approach a) performs better on smaller-scale multi-modal maps; b) is more computationally efficient for real-time applications; c) can serve directly in concert with state estimation pipelines."
+short_title: Reasoning about the unseen for efficient outdoor object navigation
+abstract: "Robots should exist anywhere humans do: indoors, outdoors, and even unmapped environments. In contrast, the focus of recent advancements in Object Goal Navigation (OGN) has targeted navigating in indoor environments by leveraging spatial and semantic cues that do not generalize outdoors. While these contributions provide valuable insights into indoor scenarios, the broader spectrum of real-world robotic applications often extends to outdoor settings. As we transition to the vast and complex terrains of outdoor environments, new challenges emerge. Unlike the structured layouts found indoors, outdoor environments lack clear spatial delineations and are riddled with inherent semantic ambiguities. Despite this, humans navigate with ease because we can reason about the unseen. We introduce a new task OUTDOOR, a new mechanism for Large Language Models (LLMs) to accurately hallucinate possible futures, and a new computationally aware success metric for pushing research forward in this more complex domain. Additionally, we show impressive results on both a simulated drone and physical quadruped in outdoor environments. Our agent has no premapping and our formalism outperforms naive LLM-based approaches."
 ---
