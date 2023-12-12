@@ -28,7 +28,7 @@ year:           "2023-12"
 thumbnail:      assets/publications/2023-Survey/scope.png
 links:
     # paper:      https://arxiv.org/abs/2304.03384
-    paper:      "assets/Survey.pdf"
+    paper:      "assets/Survey_.pdf"
     code:       https://github.com/JeffreyYH/foundation-models-robotics-survey
     bibtex:     assets/publications/2023-Survey/ref.txt
 
