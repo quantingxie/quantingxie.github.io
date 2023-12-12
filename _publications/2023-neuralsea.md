@@ -2,9 +2,9 @@
 id:             2023-neuralsea
 title:          "Foundation Models for Robotics: Current Status and a Peek at the Future"
 authors:
-    - Me
-    - Yafei
-    - Vidhi
+    - Me*
+    - Yafei*
+    - Vidhi*
     - Jay
     - Nikhil
     - Jon
@@ -27,7 +27,8 @@ venue:          In Submission.
 year:           "2023-12"
 thumbnail:      assets/publications/2023-Survey/scope.png
 links:
-    paper:      https://arxiv.org/abs/2304.03384
+    # paper:      https://arxiv.org/abs/2304.03384
+    paper:      assets/Survey.pdf
     code:       https://github.com/JeffreyYH/foundation-models-robotics-survey
     bibtex:     assets/publications/2023-Survey/ref.txt
 
