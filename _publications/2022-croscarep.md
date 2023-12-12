@@ -14,7 +14,7 @@ thumbnail:      assets/publications/2023-bestllmnav/bestllmnav.png
 links:
     paper:      https://arxiv.org/abs/2309.10103v1
     code:       https://github.com/quantingxie/reasonedexplorer
-    bibtex:     assets/publications/2022-croscarep/ref.txt
+    bibtex:     assets/publications/2023-bestllmnav/ref.txt
 
 layout: project
 short_title: Reasoning about the unseen for efficient outdoor object navigation
