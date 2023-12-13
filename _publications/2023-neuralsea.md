@@ -2,8 +2,8 @@
 id:             2023-neuralsea
 title:          "Foundation Models for Robotics: Current Status and a Peek at the Future"
 authors:
-    - Me*
     - Yafei*
+    - Me*
     - Vidhi*
     - Jay
     - Nikhil
