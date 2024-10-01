@@ -1,0 +1,9 @@
+@misc{xie2024embodiedraggeneralnonparametricembodied,
+      title={Embodied-RAG: General non-parametric Embodied Memory for Retrieval and Generation}, 
+      author={Quanting Xie and So Yeon Min and Tianyi Zhang and Aarav Bajaj and Ruslan Salakhutdinov and Matthew Johnson-Roberson and Yonatan Bisk},
+      year={2024},
+      eprint={2409.18313},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2409.18313}, 
+}

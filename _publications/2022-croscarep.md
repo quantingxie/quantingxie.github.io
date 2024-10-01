@@ -8,7 +8,7 @@ authors:
     - Kedi
     - MJR
     - Yonatan
-venue:          Submitted for ICRA, 2024.
+venue:          arXiv preprint, 2024.
 year:           "2023-09"
 thumbnail:      assets/publications/2023-bestllmnav/bestllmnav.png
 links:

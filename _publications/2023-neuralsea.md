@@ -1,6 +1,6 @@
 ---
 id:             2023-neuralsea
-title:          "Foundation Models for Robotics: Current Status and a Peek at the Future"
+title:          "Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis"
 authors:
     - Yafei*
     - Me*
@@ -27,7 +27,7 @@ venue:          In Submission.
 year:           "2023-12"
 thumbnail:      assets/publications/2023-Survey/scope.png
 links:
-    paper:      http://arxiv.org/abs/2312.08782
+    paper:      https://arxiv.org/abs/2312.08782
     # paper:      "assets/Survey.pdf"
     code:       https://robotics-fm-survey.github.io/
     bibtex:     assets/publications/2023-Survey/ref.txt
