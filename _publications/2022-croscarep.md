@@ -3,7 +3,7 @@ id:             2023-bestllmnav
 title:          "Reasoning about the Unseen for Efficient Outdoor Object Navigation"
 
 authors:
-    - Me*
+    - Me
     - Tianyi
     - Kedi
     - MJR
