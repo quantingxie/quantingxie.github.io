@@ -2,8 +2,8 @@
 id:             2023-neuralsea
 title:          "Toward General-Purpose Robots via Foundation Models: A Survey and Meta-Analysis"
 authors:
-    - Yafei*
     - Me*
+    - Yafei*
     - Vidhi*
     - Jay
     - Nikhil
