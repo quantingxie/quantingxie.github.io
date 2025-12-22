@@ -1,0 +1,8 @@
+@misc{xie2023reasoning,
+      title={Reasoning about the Unseen for Efficient Outdoor Object Navigation}, 
+      author={Quanting Xie and Tianyi Zhang and Kedi Xu and Matthew Johnson-Roberson and Yonatan Bisk},
+      year={2023},
+      eprint={2309.10103},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
