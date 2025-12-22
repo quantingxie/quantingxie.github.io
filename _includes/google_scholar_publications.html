@@ -1,0 +1,35 @@
+{% assign pubs = site.data.google_scholar %}
+
+{% if pubs == nil or pubs.size == 0 %}
+<p>
+  To show your Google Scholar publications here, export your publications from Google Scholar as CSV and add it as
+  <code>_data/google_scholar.csv</code>.
+</p>
+{% else %}
+<ul class="list__item">
+{% for p in pubs %}
+  {% assign title = p["Title"] | default: p["title"] | default: p["Paper title"] | default: p["paper_title"] %}
+  {% assign authors = p["Authors"] | default: p["authors"] | default: p["Author"] | default: p["author"] %}
+  {% assign venue = p["Publication"] | default: p["Venue"] | default: p["Journal"] | default: p["Book"] | default: p["publication"] | default: p["venue"] %}
+  {% assign year = p["Year"] | default: p["Publication year"] | default: p["publication_year"] %}
+  {% assign citations = p["Total citations"] | default: p["Citations"] | default: p["citations"] %}
+  {% assign url = p["URL"] | default: p["Pub URL"] | default: p["pub_url"] | default: p["Link"] | default: p["link"] %}
+
+  <li>
+    {% if title %}<strong>{{ title }}</strong>{% endif %}
+    {% if authors %}<br />{{ authors }}{% endif %}
+    {% if venue or year %}
+      <br /><em>
+        {% if venue %}{{ venue }}{% endif %}
+        {% if venue and year %}, {% endif %}
+        {% if year %}{{ year }}{% endif %}
+      </em>
+    {% endif %}
+    {% if citations %}<br />Citations: {{ citations }}{% endif %}
+    {% if url %}<br /><a href="{{ url }}">Link</a>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
+
+

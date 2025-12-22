@@ -26,7 +26,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Quanting (Daniel) Xie"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student at Carnegie Mellon University working on embodied intelligence and robotics."
+  bio              : "Second-year PhD student at CMU working on robot manipulation and dexterous hardware for sim-to-real."
   location         : "Pittsburgh, PA"
   employer         : "Carnegie Mellon University"
   uri              : "https://quantingxie.github.io/"
@@ -35,7 +35,7 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=rGYXRkkAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=je-4q10AAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # URL
