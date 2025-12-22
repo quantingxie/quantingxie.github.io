@@ -1,0 +1,88 @@
+/* Minimal single-column homepage styling inspired by https://ai.stanford.edu/~kzliu/ */
+
+.page__content.kz-home {
+  max-width: 820px;
+}
+
+.kz-header {
+  margin: 0 0 1rem 0;
+}
+
+.kz-name {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.kz-subtitle {
+  margin: 0.25rem 0 0 0;
+  color: #555;
+}
+
+.kz-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kz-meta li {
+  margin: 0;
+}
+
+.kz-section-title {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.kz-news li {
+  margin-bottom: 0.5rem;
+}
+
+.kz-toggle {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.kz-research {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.kz-research td {
+  vertical-align: top;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.kz-research td.kz-research-img {
+  width: 170px;
+  padding-right: 1rem;
+}
+
+.kz-research img {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.kz-research .kz-title {
+  font-weight: 700;
+}
+
+.kz-research .kz-venue {
+  font-style: italic;
+}
+
+.kz-research .kz-links a {
+  margin-right: 0.4rem;
+}
+
+.kz-hidden {
+  display: none !important;
+}
+
+

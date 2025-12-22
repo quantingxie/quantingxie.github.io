@@ -1,0 +1,55 @@
+{% include base_path %}
+
+{% assign pubs = site.publications | sort: "date" | reverse %}
+
+<table class="kz-research" id="kz-research-table">
+  <tbody>
+  {% for post in pubs %}
+    {% assign is_selected = post.selected | default: false %}
+
+    {% assign teaser = nil %}
+    {% if post.header and post.header.teaser %}
+      {% assign teaser = post.header.teaser %}
+    {% endif %}
+
+    <tr class="kz-research-row{% unless is_selected %} kz-not-selected{% endunless %}" data-selected="{% if is_selected %}1{% else %}0{% endif %}">
+      <td class="kz-research-img">
+        {% if teaser %}
+          <a href="{{ base_path }}{{ post.url }}">
+            <img
+              src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}"
+              alt="">
+          </a>
+        {% endif %}
+      </td>
+      <td>
+        <div class="kz-title">
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+        {% if post.authors %}
+          <div class="kz-authors">{{ post.authors }}</div>
+        {% endif %}
+        <div>
+          {% if post.venue %}
+            <span class="kz-venue">{{ post.venue }}</span>
+          {% endif %}
+          {% if post.date %}
+            <span>{% if post.venue %}&nbsp;{% endif %}{{ post.date | date: "%Y" }}</span>
+          {% endif %}
+        </div>
+        <div class="kz-links">
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
+          {% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+          {% if post.weburl %}<a href="{{ post.weburl }}">Project</a>{% endif %}
+          {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+        </div>
+        {% if post.excerpt %}
+          <div class="kz-excerpt">{{ post.excerpt }}</div>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+

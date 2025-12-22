@@ -4,6 +4,8 @@ category: manuscripts
 permalink: /publication/2024-embodied-rag/
 date: 2024-09-01
 venue: "In submission"
+authors: "Quanting Xie, So Yeon Tiffany Min, Tianyi Zhang, Aarav Bajaj, Ruslan Salakhutdinov, Matthew Johnson-Roberson, Yonatan Bisk"
+selected: true
 paperurl: "https://arxiv.org/abs/2409.18313"
 weburl: "https://quanting-xie.github.io/Embodied-RAG-web/"
 bibtexurl: "/files/publications/2024-Embodied/ref.txt"
