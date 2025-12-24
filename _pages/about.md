@@ -2,11 +2,12 @@
 permalink: /
 title:
 author_profile: false
-classes: wide kz-home
+classes: wide
 ---
 
 {% include base_path %}
 
+<div class="kz-home">
 <div class="kz-shell">
   <aside class="kz-sidebar">
     <img class="kz-avatar" src="{{ base_path }}/images/profile.jpg" alt="Quanting Xie">
@@ -30,19 +31,19 @@ classes: wide kz-home
       {% if site.author.googlescholar %}
       <li><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
       {% endif %}
-      <li><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i><a href="{{ base_path }}/cv/">CV</a></li>
+      <li><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i><a href="#cv">CV</a></li>
     </ul>
   </aside>
 
   <main class="kz-main">
 
-## About
+<h2 id="about">About</h2>
 
-I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) at Carnegie Mellon University (CMU), advised by Prof. [Yonatan Bisk](https://yonatanbisk.com/). I have also had the opportunity to closely work with Prof. [Matthew Johnson-Roberson](https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/) and Prof. [Chris Atkeson](http://www.cs.cmu.edu/~cga/).
+<p>I’m a second-year PhD student at the <a href="https://talkingtorobots.com/">CLAW Lab</a> at Carnegie Mellon University (CMU), advised by Prof. <a href="https://yonatanbisk.com/">Yonatan Bisk</a>. I have also had the opportunity to closely work with Prof. <a href="https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/">Matthew Johnson-Roberson</a> and Prof. <a href="http://www.cs.cmu.edu/~cga/">Chris Atkeson</a>.</p>
 
-**I research robot manipulation and novel hardware to reduce the embodiment gap and sim-to-real gaps in dexterous manipulation.** Previously, I worked on LLM spatial reasoning.
+<p><strong>I research robot manipulation and novel hardware to reduce the embodiment gap and sim-to-real gaps in dexterous manipulation.</strong> Previously, I worked on LLM spatial reasoning.</p>
 
-## News and Olds
+<h2 id="news">News and Olds</h2>
 
 {% if site.data.news %}
 <ul class="kz-news">
@@ -52,7 +53,7 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 </ul>
 {% endif %}
 
-## Research
+<h2 id="research">Research</h2>
 
 <div class="kz-toggle">
   <a href="javascript:void(0)" id="kz-show-selected">Show Selected</a> |
@@ -79,7 +80,7 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
   })();
 </script>
 
-## Experience
+<h2 id="experience">Experience</h2>
 
 {% if site.data.experience %}
 <ul>
@@ -94,7 +95,7 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 </ul>
 {% endif %}
 
-## Professional Service
+<h2 id="service">Professional Service</h2>
 
 {% if site.data.service %}
 <ul>
@@ -104,7 +105,29 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 </ul>
 {% endif %}
 
-## Misc
+<h2 id="cv">CV</h2>
+
+<p><a href="{{ base_path }}/files/Resume.pdf">Download CV (PDF)</a></p>
+
+<h3>Education</h3>
+{% if site.data.education %}
+<ul>
+{% for item in site.data.education %}
+  <li><strong>{{ item.position }}</strong> — {{ item.institution }} ({{ item.time }})</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<h3>Work</h3>
+{% if site.data.work %}
+<ul>
+{% for item in site.data.work %}
+  <li><strong>{{ item.position }}</strong> — {{ item.institution }} ({{ item.time }})</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<h2 id="misc">Misc</h2>
 
 {% if site.data.misc %}
 <ul>
@@ -115,4 +138,5 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 {% endif %}
 
   </main>
+</div>
 </div>

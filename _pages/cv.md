@@ -1,40 +1,15 @@
 ---
-layout: archive
-title: "CV"
+layout: default
+title:
 permalink: /cv/
-author_profile: true
+author_profile: false
+sitemap: false
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
-You can download a PDF version here: [Resume.pdf](/files/Resume.pdf).
-
-## Education
-
-{% if site.data.education %}
-{% for item in site.data.education %}
-- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
-{% endfor %}
-{% endif %}
-
-## Work experience
-
-{% if site.data.work %}
-{% for item in site.data.work %}
-- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
-{% endfor %}
-{% endif %}
-
-## Service
-
-- Reviewer for CoRL, ICRA, RA-L, IROS
-
-## Publications
-
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
+<meta http-equiv="refresh" content="0; url={{ base_path }}/#cv">
+<script>window.location.replace("{{ base_path }}/#cv");</script>
+<p>Redirecting to <a href="{{ base_path }}/#cv">CV</a>…</p>

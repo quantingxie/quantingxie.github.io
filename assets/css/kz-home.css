@@ -1,10 +1,11 @@
 /* Minimal two-column homepage styling inspired by https://ai.stanford.edu/~kzliu/ */
 
-.page__content.kz-home {
+.kz-home {
   max-width: 1000px;
+  margin: 0 auto;
 }
 
-.kz-shell {
+.kz-home .kz-shell {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 2.25rem;
@@ -12,24 +13,24 @@
 }
 
 @media (max-width: 900px) {
-  .kz-shell {
+  .kz-home .kz-shell {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
 
-.kz-sidebar {
+.kz-home .kz-sidebar {
   position: sticky;
   top: 1.5rem;
 }
 
 @media (max-width: 900px) {
-  .kz-sidebar {
+  .kz-home .kz-sidebar {
     position: static;
   }
 }
 
-.kz-avatar {
+.kz-home .kz-avatar {
   width: 180px;
   height: 180px;
   border-radius: 999px;
@@ -38,26 +39,26 @@
   margin: 0 auto 0.75rem auto;
 }
 
-.kz-side-name {
+.kz-home .kz-side-name {
   font-size: 1.45rem;
   line-height: 1.15;
   margin: 0;
   text-align: center;
 }
 
-.kz-side-subtitle {
+.kz-home .kz-side-subtitle {
   text-align: center;
   margin: 0.25rem 0 0 0;
   color: #555;
 }
 
-.kz-side-meta {
+.kz-home .kz-side-meta {
   margin: 0.75rem 0 0 0;
   padding: 0;
   list-style: none;
 }
 
-.kz-side-meta li {
+.kz-home .kz-side-meta li {
   display: flex;
   gap: 0.5rem;
   align-items: baseline;
@@ -65,61 +66,61 @@
   padding: 0.25rem 0;
 }
 
-.kz-side-meta i {
+.kz-home .kz-side-meta i {
   width: 1.25rem;
   color: #666;
 }
 
-.kz-section-title {
+.kz-home .kz-section-title {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
-.kz-news li {
+.kz-home .kz-news li {
   margin-bottom: 0.5rem;
 }
 
-.kz-toggle {
+.kz-home .kz-toggle {
   margin: 0.5rem 0 0.75rem 0;
   font-size: 0.95rem;
 }
 
-.kz-research {
+.kz-home .kz-research {
   width: 100%;
   border-collapse: collapse;
 }
 
-.kz-research td {
+.kz-home .kz-research td {
   vertical-align: top;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.kz-research td.kz-research-img {
+.kz-home .kz-research td.kz-research-img {
   width: 170px;
   padding-right: 1rem;
 }
 
-.kz-research img {
+.kz-home .kz-research img {
   width: 160px;
   height: auto;
   border-radius: 6px;
   display: block;
 }
 
-.kz-research .kz-title {
+.kz-home .kz-research .kz-title {
   font-weight: 700;
 }
 
-.kz-research .kz-venue {
+.kz-home .kz-research .kz-venue {
   font-style: italic;
 }
 
-.kz-research .kz-links a {
+.kz-home .kz-research .kz-links a {
   margin-right: 0.4rem;
 }
 
-.kz-hidden {
+.kz-home .kz-hidden {
   display: none !important;
 }
 
