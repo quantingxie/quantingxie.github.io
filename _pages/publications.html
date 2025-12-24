@@ -5,15 +5,15 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% include base_path %}
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
-
-<h2>Google Scholar</h2>
-{% include google_scholar_publications.html %}
-<hr />
+<div class="page__content kz-home">
+  {% include research_table.html %}
+</div>
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}

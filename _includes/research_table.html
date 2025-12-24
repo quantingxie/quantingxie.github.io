@@ -12,19 +12,25 @@
       {% assign teaser = post.header.teaser %}
     {% endif %}
 
+    {% assign primary_url = nil %}
+    {% if post.paperurl %}{% assign primary_url = post.paperurl %}{% endif %}
+    {% if primary_url == nil and post.weburl %}{% assign primary_url = post.weburl %}{% endif %}
+    {% if primary_url == nil and post.codeurl %}{% assign primary_url = post.codeurl %}{% endif %}
+    {% if primary_url == nil and post.bibtexurl %}{% assign primary_url = post.bibtexurl %}{% endif %}
+
     <tr class="kz-research-row{% unless is_selected %} kz-not-selected{% endunless %}" data-selected="{% if is_selected %}1{% else %}0{% endif %}">
       <td class="kz-research-img">
         {% if teaser %}
-          <a href="{{ base_path }}{{ post.url }}">
+          {% if primary_url %}<a href="{{ primary_url }}">{% endif %}
             <img
               src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}"
               alt="">
-          </a>
+          {% if primary_url %}</a>{% endif %}
         {% endif %}
       </td>
       <td>
         <div class="kz-title">
-          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+          {% if primary_url %}<a href="{{ primary_url }}">{% endif %}{{ post.title }}{% if primary_url %}</a>{% endif %}
         </div>
         {% if post.authors %}
           <div class="kz-authors">{{ post.authors }}</div>

@@ -2,22 +2,39 @@
 permalink: /
 title:
 author_profile: false
-classes: wide
+classes: wide kz-home
 ---
 
-<div class="kz-header">
-  <h1 class="kz-name">Quanting Xie</h1>
-  <p class="kz-subtitle">PhD student @ Carnegie Mellon University</p>
-  <ul class="kz-meta">
-    <li>{% if site.author.location %}{{ site.author.location }}{% endif %}</li>
-    <li><a href="{{ site.url }}{{ site.baseurl }}">{{ site.url | remove: "https://" | remove: "http://" }}</a></li>
-    <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-    <li><a href="https://x.com/{{ site.author.twitter }}">Twitter</a></li>
-    <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
-    <li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
-    <li><a href="/cv/">CV</a></li>
-  </ul>
-</div>
+{% include base_path %}
+
+<div class="kz-shell">
+  <aside class="kz-sidebar">
+    <img class="kz-avatar" src="{{ base_path }}/images/profile.jpg" alt="Quanting Xie">
+    <h1 class="kz-side-name">Quanting Xie</h1>
+    <p class="kz-side-subtitle">PhD student @ Carnegie Mellon University</p>
+
+    <ul class="kz-side-meta">
+      {% if site.author.location %}
+      <li><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i><span>{{ site.author.location }}</span></li>
+      {% endif %}
+      <li><i class="fas fa-fw fa-link" aria-hidden="true"></i><a href="{{ site.url }}{{ site.baseurl }}">{{ site.url | remove: "https://" | remove: "http://" }}</a></li>
+      {% if site.author.email %}
+      <li><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+      {% endif %}
+      {% if site.author.twitter %}
+      <li><i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><a href="https://x.com/{{ site.author.twitter }}">Twitter</a></li>
+      {% endif %}
+      {% if site.author.github %}
+      <li><i class="fab fa-fw fa-github" aria-hidden="true"></i><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+      {% endif %}
+      {% if site.author.googlescholar %}
+      <li><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
+      {% endif %}
+      <li><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i><a href="{{ base_path }}/cv/">CV</a></li>
+    </ul>
+  </aside>
+
+  <main class="kz-main">
 
 ## About
 
@@ -96,3 +113,6 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 {% endfor %}
 </ul>
 {% endif %}
+
+  </main>
+</div>
