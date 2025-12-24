@@ -1,71 +1,44 @@
 ---
 permalink: /
 title:
-author_profile: false
-classes: wide
+layout: single
+author_profile: true
 ---
 
-{% include base_path %}
+## About
 
-<div class="kz-home">
-<div class="kz-shell">
-  <aside class="kz-sidebar">
-    <img class="kz-avatar" src="{{ base_path }}/images/profile.jpg" alt="Quanting Xie">
-    <h1 class="kz-side-name">Quanting Xie</h1>
-    <p class="kz-side-subtitle">PhD student @ Carnegie Mellon University</p>
+I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) at Carnegie Mellon University (CMU), advised by Prof. [Yonatan Bisk](https://yonatanbisk.com/). I have also had the opportunity to closely work with Prof. [Matthew Johnson-Roberson](https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/) and Prof. [Chris Atkeson](http://www.cs.cmu.edu/~cga/).
 
-    <ul class="kz-side-meta">
-      {% if site.author.location %}
-      <li><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i><span>{{ site.author.location }}</span></li>
-      {% endif %}
-      <li><i class="fas fa-fw fa-link" aria-hidden="true"></i><a href="{{ site.url }}{{ site.baseurl }}">{{ site.url | remove: "https://" | remove: "http://" }}</a></li>
-      {% if site.author.email %}
-      <li><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-      {% endif %}
-      {% if site.author.twitter %}
-      <li><i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><a href="https://x.com/{{ site.author.twitter }}">Twitter</a></li>
-      {% endif %}
-      {% if site.author.github %}
-      <li><i class="fab fa-fw fa-github" aria-hidden="true"></i><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
-      {% endif %}
-      {% if site.author.googlescholar %}
-      <li><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
-      {% endif %}
-      <li><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i><a href="#cv">CV</a></li>
-    </ul>
-  </aside>
+**I research robot manipulation and novel hardware to reduce the embodiment gap and sim-to-real gaps in dexterous manipulation.** Previously, I worked on LLM spatial reasoning.
 
-  <main class="kz-main">
-
-<h2 id="about">About</h2>
-
-<p>I’m a second-year PhD student at the <a href="https://talkingtorobots.com/">CLAW Lab</a> at Carnegie Mellon University (CMU), advised by Prof. <a href="https://yonatanbisk.com/">Yonatan Bisk</a>. I have also had the opportunity to closely work with Prof. <a href="https://www.ri.cmu.edu/ri-faculty/matt-johnson-roberson/">Matthew Johnson-Roberson</a> and Prof. <a href="http://www.cs.cmu.edu/~cga/">Chris Atkeson</a>.</p>
-
-<p><strong>I research robot manipulation and novel hardware to reduce the embodiment gap and sim-to-real gaps in dexterous manipulation.</strong> Previously, I worked on LLM spatial reasoning.</p>
-
-<h2 id="news">News and Olds</h2>
+## News and Olds
 
 {% if site.data.news %}
-<ul class="kz-news">
 {% for item in site.data.news %}
-  <li><strong>{{ item.date }}</strong>: {{ item.text }}</li>
+- **{{ item.date }}**: {{ item.text }}
 {% endfor %}
-</ul>
 {% endif %}
 
-<h2 id="research">Research</h2>
+## Research
 
 <div class="kz-toggle">
   <a href="javascript:void(0)" id="kz-show-selected">Show Selected</a> |
   <a href="javascript:void(0)" id="kz-show-all">Show All</a>
 </div>
 
-{% include research_table.html %}
+<div class="grid__wrapper" id="kz-research-grid">
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% for post in pubs %}
+  <div class="grid__item" data-selected="{% if post.selected %}1{% else %}0{% endif %}">
+    {% include archive-single-external.html type="grid" %}
+  </div>
+{% endfor %}
+</div>
 
 <script>
   (function () {
     function setMode(mode) {
-      var rows = document.querySelectorAll('#kz-research-table .kz-research-row');
+      var rows = document.querySelectorAll('#kz-research-grid .grid__item');
       rows.forEach(function (row) {
         var selected = row.getAttribute('data-selected') === '1';
         if (mode === 'selected' && !selected) row.classList.add('kz-hidden');
@@ -80,63 +53,46 @@ classes: wide
   })();
 </script>
 
-<h2 id="experience">Experience</h2>
+## Experience
 
 {% if site.data.experience %}
-<ul>
 {% for x in site.data.experience %}
-  <li>
-    {% if x.org_url %}<a href="{{ x.org_url }}"><strong>{{ x.org }}</strong></a>{% else %}<strong>{{ x.org }}</strong>{% endif %}
-    {% if x.location %} — {{ x.location }}{% endif %}
-    <em>({{ x.role }}, {{ x.time }})</em>
-    {% if x.group %} — {% if x.group_url %}<a href="{{ x.group_url }}">{{ x.group }}</a>{% else %}{{ x.group }}{% endif %}{% endif %}
-  </li>
+- {% if x.org_url %}[**{{ x.org }}**]({{ x.org_url }}){% else %}**{{ x.org }}**{% endif %}{% if x.location %} — {{ x.location }}{% endif %} *( {{ x.role }}, {{ x.time }} ){% if x.group %} — {% if x.group_url %}[{{ x.group }}]({{ x.group_url }}){% else %}{{ x.group }}{% endif %}{% endif %}
 {% endfor %}
-</ul>
 {% endif %}
 
-<h2 id="service">Professional Service</h2>
+## Professional Service
 
 {% if site.data.service %}
-<ul>
 {% for s in site.data.service %}
-  <li>{{ s }}</li>
+- {{ s }}
 {% endfor %}
-</ul>
 {% endif %}
 
-<h2 id="cv">CV</h2>
+## CV
 
-<p><a href="{{ base_path }}/files/Resume.pdf">Download CV (PDF)</a></p>
+[Download CV (PDF)](/files/Resume.pdf)
 
-<h3>Education</h3>
+### Education
+
 {% if site.data.education %}
-<ul>
 {% for item in site.data.education %}
-  <li><strong>{{ item.position }}</strong> — {{ item.institution }} ({{ item.time }})</li>
+- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
 {% endfor %}
-</ul>
 {% endif %}
 
-<h3>Work</h3>
+### Work
+
 {% if site.data.work %}
-<ul>
 {% for item in site.data.work %}
-  <li><strong>{{ item.position }}</strong> — {{ item.institution }} ({{ item.time }})</li>
+- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
 {% endfor %}
-</ul>
 {% endif %}
 
-<h2 id="misc">Misc</h2>
+## Misc
 
 {% if site.data.misc %}
-<ul>
 {% for m in site.data.misc %}
-  <li>{{ m }}</li>
+- {{ m }}
 {% endfor %}
-</ul>
 {% endif %}
-
-  </main>
-</div>
-</div>

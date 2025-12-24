@@ -1,0 +1,70 @@
+{% include base_path %}
+
+{% comment %}
+  Like archive-single.html, but links publications to external URLs (PDF/Project/Code/BibTeX)
+  so we can keep a single-page site with publications collection output disabled.
+{% endcomment %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = nil %}
+{% endif %}
+
+{% assign title = post.title %}
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% endif %}
+
+{% assign primary_url = nil %}
+{% if post.paperurl %}{% assign primary_url = post.paperurl %}{% endif %}
+{% if primary_url == nil and post.weburl %}{% assign primary_url = post.weburl %}{% endif %}
+{% if primary_url == nil and post.codeurl %}{% assign primary_url = post.codeurl %}{% endif %}
+{% if primary_url == nil and post.bibtexurl %}{% assign primary_url = post.bibtexurl %}{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if primary_url %}
+        <a href="{{ primary_url }}">{{ title }}</a>
+      {% else %}
+        {{ title }}
+      {% endif %}
+    </h2>
+
+    {% if post.collection == 'publications' %}
+      {% if post.venue or post.date %}
+        <p>
+          {% if post.venue %}Published in <i>{{ post.venue }}</i>{% endif %}
+          {% if post.venue and post.date %}, {% endif %}
+          {% if post.date %}{{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
+        </p>
+      {% endif %}
+    {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% endif %}
+
+    <p>
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
+      {% if post.codeurl %}{% if post.paperurl %} / {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
+      {% if post.weburl %}{% if post.paperurl or post.codeurl %} / {% endif %}<a href="{{ post.weburl }}">Project</a>{% endif %}
+      {% if post.bibtexurl %}{% if post.paperurl or post.codeurl or post.weburl %} / {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+    </p>
+  </article>
+</div>
+
+
