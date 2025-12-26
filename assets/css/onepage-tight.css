@@ -1,0 +1,60 @@
+/* Tighten typography for the single-page layout (smaller, denser like default AcademicPages). */
+
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 15px;
+  }
+}
+
+.page__content {
+  line-height: 1.55;
+}
+
+.page__content h2 {
+  font-size: 1.35rem;
+  margin-top: 1.6rem;
+}
+
+.page__content h3 {
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.page__content p,
+.page__content li {
+  font-size: 1rem;
+}
+
+/* Sidebar author card */
+.author__avatar img,
+.author__avatar .author__avatar {
+  width: 140px;
+  height: 140px;
+}
+
+.author__name {
+  font-size: 1.25rem;
+}
+
+.author__bio {
+  font-size: 0.95rem;
+}
+
+.author__urls {
+  font-size: 0.95rem;
+}
+
+/* Research cards */
+.archive__item-title {
+  font-size: 1.05rem;
+}
+
+.archive__item-excerpt {
+  font-size: 0.95rem;
+}
+
+
