@@ -26,10 +26,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Quanting (Daniel) Xie"
   pronouns         : # example: "she/her"  
-  bio              : "Second-year PhD student at CMU working on robot manipulation and dexterous hardware for sim-to-real."
+  bio              : "PhD student @ CMU RI"
   location         : "Pittsburgh, PA"
   employer         : "Carnegie Mellon University"
-  uri              : "https://quantingxie.github.io/"
   email            : "quantinx@andrew.cmu.edu"
 
   # Academic websites
