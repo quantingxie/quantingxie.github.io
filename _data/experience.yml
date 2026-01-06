@@ -1,5 +1,24 @@
-- org: "Apple"
-  role: "Manufacturing Design Engineering Intern"
-  time: "2022"
-
-
+- org: Carnegie Mellon University
+  org_url: https://www.ri.cmu.edu/
+  location: Pittsburgh, PA
+  role: PhD Student, Robotics Institute
+  time: 2024-Present
+  icon: cmu-logo.png
+- org: Apple
+  org_url: https://www.apple.com/
+  location: Cupertino, CA
+  role: Manufacturing Design Engineering Intern
+  time: 2022
+  icon: apple-logo.png
+- org: Carnegie Mellon University
+  org_url: https://www.meche.engineering.cmu.edu/
+  location: Pittsburgh, PA
+  role: M.Sc. in Mechanical Engineering - Research
+  time: 2023
+  icon: cmu-logo.png
+- org: Rensselaer Polytechnic Institute
+  org_url: https://www.rpi.edu/
+  location: Troy, NY
+  role: B.Sc. in Mechanical Engineering
+  time: 2021
+  icon: rpi-logo.png

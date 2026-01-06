@@ -47,6 +47,8 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
         if (mode === 'selected' && !selected) row.classList.add('kz-hidden');
         else row.classList.remove('kz-hidden');
       });
+      document.getElementById('kz-show-selected').style.fontWeight = (mode === 'selected' ? 'bold' : 'normal');
+      document.getElementById('kz-show-all').style.fontWeight = (mode === 'all' ? 'bold' : 'normal');
     }
     var sel = document.getElementById('kz-show-selected');
     var all = document.getElementById('kz-show-all');
@@ -60,7 +62,22 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 
 {% if site.data.experience %}
 {% for x in site.data.experience %}
-- {% if x.org_url %}[**{{ x.org }}**]({{ x.org_url }}){% else %}**{{ x.org }}**{% endif %}{% if x.location %} — {{ x.location }}{% endif %} *( {{ x.role }}, {{ x.time }} ){% if x.group %} — {% if x.group_url %}[{{ x.group }}]({{ x.group_url }}){% else %}{{ x.group }}{% endif %}{% endif %}
+<div class="experience-item">
+  <div class="experience-info">
+    <div class="experience-org">
+      {% if x.org_url %}<a href="{{ x.org_url }}">{{ x.org }}</a>{% else %}{{ x.org }}{% endif %}, 
+      <span class="experience-location">{{ x.location }}</span>
+    </div>
+    <div class="experience-role-time">
+      {{ x.role }}, {{ x.time }}
+    </div>
+  </div>
+  {% if x.icon %}
+  <div class="experience-icon">
+    <img src="{{ '/images/' | append: x.icon | relative_url }}" alt="{{ x.org }}">
+  </div>
+  {% endif %}
+</div>
 {% endfor %}
 {% endif %}
 
@@ -69,26 +86,6 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 {% if site.data.service %}
 {% for s in site.data.service %}
 - {{ s }}
-{% endfor %}
-{% endif %}
-
-## CV
-
-[Download CV (PDF)](/files/Resume.pdf)
-
-### Education
-
-{% if site.data.education %}
-{% for item in site.data.education %}
-- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
-{% endfor %}
-{% endif %}
-
-### Work
-
-{% if site.data.work %}
-{% for item in site.data.work %}
-- **{{ item.position }}** — {{ item.institution }} ({{ item.time }})
 {% endfor %}
 {% endif %}
 

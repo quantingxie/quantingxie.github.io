@@ -136,6 +136,48 @@ html {
   display: none !important;
 }
 
+/* Experience items */
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.8rem;
+}
+
+.experience-info {
+  flex: 1;
+}
+
+.experience-org {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0056b3;
+}
+
+.experience-location {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.experience-role-time {
+  font-style: italic;
+  color: #444;
+  margin-top: 0.1rem;
+}
+
+.experience-icon {
+  flex: 0 0 45px;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-icon img {
+  max-width: 45px;
+  max-height: 45px;
+  object-fit: contain;
+}
+
 /* Mobile responsive */
 @media (max-width: 600px) {
   .research-item {
