@@ -5,7 +5,7 @@ permalink: /publication/2025-activity-workflows
 date: 2025-11-18
 venue: "arXiv preprint"
 authors: "Fan Yang, Quanting Xie, Atsunori Moteki, Shoichi Masui, Shan Jiang, Kanji Uchino, Yonatan Bisk, Graham Neubig"
-selected: true
+selected: false
 paperurl: "https://arxiv.org/abs/2511.14945"
 excerpt: "Introduces a benchmark for long-term periodic human activity workflows."
 header:

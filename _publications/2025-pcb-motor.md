@@ -5,7 +5,7 @@ permalink: /publication/2025-pcb-motor
 date: 2025-09-28
 venue: "IEEE Energy Conversion Congress and Expo 2025"
 authors: "Jianren Wang, Quanting Xie, Jie Han, Yang Zhang, Christopher G. Atkeson, Abhinav Gupta, Deepak Pathak, Yonatan Bisk"
-selected: true
+selected: false
 paperurl: "https://www.arxiv.org/abs/2509.23561"
 excerpt: "Introduces a micro-scale AFPM motor with PCB windings."
 header:

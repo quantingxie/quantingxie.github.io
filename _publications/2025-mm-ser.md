@@ -5,7 +5,7 @@ permalink: /publication/2025-mm-ser
 date: 2025-08-29
 venue: "arXiv preprint"
 authors: "Junha Song, Yongsik Jo, So Yeon Min, Quanting Xie, Taehwan Kim, Yonatan Bisk, Jaegul Choo"
-selected: true
+selected: false
 paperurl: "https://arxiv.org/abs/2508.21451"
 weburl: "https://sites.google.com/view/junha/mm-ser"
 excerpt: "A lightweight captioning model using multimodal self-refinement."
