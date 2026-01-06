@@ -26,19 +26,19 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
   <a href="javascript:void(0)" id="kz-show-all">Show All</a>
 </div>
 
-<div class="grid__wrapper" id="kz-research-grid">
+<div class="list__wrapper" id="kz-research-grid">
 {% assign pubs = site.publications | sort: "date" | reverse %}
 {% for post in pubs %}
   {% assign data_selected = "0" %}
   {% if post.selected %}{% assign data_selected = "1" %}{% endif %}
-  {% include archive-single-external.html type="grid" data_selected=data_selected %}
+  {% include archive-single-external.html type="list" data_selected=data_selected %}
 {% endfor %}
 </div>
 
 <script>
   (function () {
     function setMode(mode) {
-      var rows = document.querySelectorAll('#kz-research-grid .grid__item');
+      var rows = document.querySelectorAll('#kz-research-grid .list__item');
       rows.forEach(function (row) {
         var selected = row.getAttribute('data-selected') === '1';
         if (mode === 'selected' && !selected) row.classList.add('kz-hidden');
