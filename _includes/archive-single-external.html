@@ -35,14 +35,23 @@
       {% endif %}
       
       {% if post.venue %}
-        <div class="research-venue">{{ post.venue }}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</div>
+        {% assign lower_venue = post.venue | downcase %}
+        {% unless lower_venue contains "arxiv" or lower_venue contains "submission" %}
+          <div class="research-venue">{{ post.venue }}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</div>
+        {% else %}
+          {% if post.date %}
+            <div class="research-venue">{{ post.date | date: "%Y" }}</div>
+          {% endif %}
+        {% endunless %}
       {% endif %}
       
+      {% comment %}
       {% if post.status %}
         <div class="research-spotlight">{{ post.status }}</div>
       {% elsif post.venue contains "submission" %}
         <div class="research-spotlight">In submission</div>
       {% endif %}
+      {% endcomment %}
 
       <div class="research-links">
         {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
