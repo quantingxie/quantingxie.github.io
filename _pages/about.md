@@ -29,9 +29,9 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
 <div class="grid__wrapper" id="kz-research-grid">
 {% assign pubs = site.publications | sort: "date" | reverse %}
 {% for post in pubs %}
-  <div class="grid__item" data-selected="{% if post.selected %}1{% else %}0{% endif %}">
-    {% include archive-single-external.html type="grid" %}
-  </div>
+  {% assign data_selected = "0" %}
+  {% if post.selected %}{% assign data_selected = "1" %}{% endif %}
+  {% include archive-single-external.html type="grid" data_selected=data_selected %}
 {% endfor %}
 </div>
 
