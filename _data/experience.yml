@@ -1,15 +1,5 @@
-- org: "Carnegie Mellon University"
-  org_url: "https://www.cmu.edu/"
-  location: "Pittsburgh, PA"
-  role: "PhD student"
-  group: "CLAW Lab"
-  group_url: "https://talkingtorobots.com/"
-  time: "2023–Present"
-
-- org: "Carnegie Mellon University"
-  org_url: "https://www.cmu.edu/"
-  location: "Pittsburgh, PA"
-  role: "Research Assistant"
-  time: "2022–Now"
+- org: "Apple"
+  role: "Manufacturing Design Engineering Intern"
+  time: "2022"
 
 
