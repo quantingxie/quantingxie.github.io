@@ -44,10 +44,6 @@
         <div class="research-spotlight">In submission</div>
       {% endif %}
 
-      {% if post.excerpt %}
-        <div class="research-excerpt" style="font-size: 0.95rem; margin-bottom: 0.25rem;">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</div>
-      {% endif %}
-
       <div class="research-links">
         {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
         {% if post.bibtexurl %}{% if post.paperurl %} / {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}

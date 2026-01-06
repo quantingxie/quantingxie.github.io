@@ -10,13 +10,21 @@ html {
   }
 }
 
+/* Hide template clutter for a minimalist look */
+.masthead, .page__footer, .btn--inverse {
+  display: none !important;
+}
+
 .page__content {
   line-height: 1.55;
+  padding-top: 2rem;
 }
 
 .page__content h2 {
   font-size: 1.35rem;
   margin-top: 1.6rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
 .page__content h3 {
@@ -24,45 +32,47 @@ html {
   margin-top: 1.2rem;
 }
 
-.page__content p,
-.page__content li {
-  font-size: 1rem;
-}
-
 /* Sidebar author card */
-.author__avatar img,
-.author__avatar .author__avatar {
-  width: 140px;
-  height: 140px;
+.author__avatar img {
+  width: 160px !important;
+  height: 160px !important;
+  border-radius: 50%;
 }
 
 .author__name {
   font-size: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .author__bio {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 .author__urls {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem !important;
 }
 
-/* Research cards - Row by row layout */
+/* Research cards - Row by row layout (Left image, Right text) */
 .research-item {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   align-items: flex-start;
 }
 
 .research-image {
-  flex: 0 0 180px;
+  flex: 0 0 200px !important;
+  max-width: 200px !important;
 }
 
 .research-image img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -93,24 +103,40 @@ html {
 }
 
 .research-venue {
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 0.25rem;
+  font-style: italic;
 }
 
 .research-spotlight {
   color: #d9534f;
   font-weight: bold;
   margin-bottom: 0.25rem;
+  font-size: 0.9rem;
 }
 
 .research-links {
   font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .research-links a {
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
+  color: #0056b3;
 }
 
 .kz-hidden {
   display: none !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .research-item {
+    flex-direction: column !important;
+  }
+  .research-image {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
