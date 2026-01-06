@@ -4,7 +4,6 @@ category: manuscripts
 permalink: /publication/2023-neuralsea/
 date: 2023-12-01
 venue: "In submission"
-status: "Spotlight"
 authors: "Quanting Xie, Yafei Hu, Vidhi Jain, Jay Patrikar, Nikhil Keetha, Jonathan Francis, Yaqi Xie, Seungchan Kim, Tianyi Zhang, Shibo Zhao, Yu-Quan Chong, Zsolt Kira, Dhruv Batra, Xiaolong Wang, Chen Wang, Matthew Johnson-Roberson, Katia Sycara, Sebastian Scherer, Fei Xia, Yonatan Bisk"
 selected: true
 paperurl: "https://arxiv.org/abs/2312.08782"
