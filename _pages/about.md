@@ -25,6 +25,9 @@ I’m a second-year PhD student at the [CLAW Lab](https://talkingtorobots.com/) 
   <a href="javascript:void(0)" id="kz-show-selected">Show Selected</a> |
   <a href="javascript:void(0)" id="kz-show-all">Show All</a>
 </div>
+<div style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
+  (*equal contribution, †alphabetical/random authorship)
+</div>
 
 <div class="list__wrapper" id="kz-research-grid">
 {% assign pubs = site.publications | sort: "date" | reverse %}

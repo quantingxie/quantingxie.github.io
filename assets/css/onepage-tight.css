@@ -48,13 +48,69 @@ html {
   font-size: 0.95rem;
 }
 
-/* Research cards */
-.archive__item-title {
-  font-size: 1.05rem;
+/* Research cards - Row by row layout */
+.research-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
-.archive__item-excerpt {
-  font-size: 0.95rem;
+.research-image {
+  flex: 0 0 180px;
 }
 
+.research-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
+.research-info {
+  flex: 1;
+}
+
+.research-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.25;
+}
+
+.research-title a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.research-title a:hover {
+  text-decoration: underline;
+}
+
+.research-authors {
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.research-venue {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.research-spotlight {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.research-links {
+  font-size: 0.9rem;
+}
+
+.research-links a {
+  margin-right: 0.5rem;
+}
+
+.kz-hidden {
+  display: none !important;
+}
