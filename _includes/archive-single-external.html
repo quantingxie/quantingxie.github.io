@@ -31,13 +31,13 @@
       </div>
       
       {% if post.authors %}
-        <div class="research-authors">{{ post.authors }}</div>
+        <div class="research-authors">{{ post.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
       {% endif %}
       
       {% if post.venue %}
         {% assign lower_venue = post.venue | downcase %}
         {% unless lower_venue contains "arxiv" or lower_venue contains "submission" %}
-          <div class="research-venue">{{ post.venue }}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</div>
+          <div class="research-venue">{{ post.venue | markdownify | remove: '<p>' | remove: '</p>' }}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</div>
         {% else %}
           {% if post.date %}
             <div class="research-venue">{{ post.date | date: "%Y" }}</div>
@@ -57,7 +57,8 @@
         {% if post.paperurl %}<a href="{{ post.paperurl }}">PDF</a>{% endif %}
         {% if post.bibtexurl %}{% if post.paperurl %} / {% endif %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
         {% if post.codeurl %}{% if post.paperurl or post.bibtexurl %} / {% endif %}<a href="{{ post.codeurl }}">Code</a>{% endif %}
-        {% if post.weburl %}{% if post.paperurl or post.bibtexurl or post.codeurl %} / {% endif %}<a href="{{ post.weburl }}">Project</a>{% endif %}
+        {% if post.demourl %}{% if post.paperurl or post.bibtexurl or post.codeurl %} / {% endif %}<a href="{{ post.demourl }}">Demo</a>{% endif %}
+        {% if post.weburl %}{% if post.paperurl or post.bibtexurl or post.codeurl or post.demourl %} / {% endif %}<a href="{{ post.weburl }}">Project</a>{% endif %}
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ category: manuscripts
 permalink: /publication/2023-bestllmnav/
 date: 2023-09-01
 venue: "arXiv preprint (2024)"
-authors: "Quanting Xie, Tianyi Zhang, Kedi Xu, Matthew Johnson-Roberson, Yonatan Bisk"
+authors: "**Quanting Xie**, Tianyi Zhang, Kedi Xu, Matthew Johnson-Roberson, Yonatan Bisk"
 selected: true
 paperurl: "https://arxiv.org/abs/2309.10103v1"
 codeurl: "https://github.com/quantingxie/reasonedexplorer"
@@ -14,7 +14,7 @@ header:
   teaser: publications/2023-bestllmnav/bestllmnav.png
 ---
 
-**Authors:** Quanting Xie, Tianyi Zhang, Kedi Xu, Matthew Johnson-Roberson, Yonatan Bisk
+**Authors:** **Quanting Xie**, Tianyi Zhang, Kedi Xu, Matthew Johnson-Roberson, Yonatan Bisk
 
 ## Abstract
 

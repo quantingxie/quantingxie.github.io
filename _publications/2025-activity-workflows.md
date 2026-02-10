@@ -3,16 +3,17 @@ title: "Unsupervised Discovery of Long-Term Spatiotemporal Periodic Workflows in
 category: manuscripts
 permalink: /publication/2025-activity-workflows
 date: 2025-11-18
-venue: "arXiv preprint"
-authors: "Fan Yang, Quanting Xie, Atsunori Moteki, Shoichi Masui, Shan Jiang, Kanji Uchino, Yonatan Bisk, Graham Neubig"
+venue: "WACV, <span style='color:red'>Oral</span> (top 2%)"
+authors: "Fan Yang, **Quanting Xie**, Atsunori Moteki, Shoichi Masui, Shan Jiang, Kanji Uchino, Yonatan Bisk, Graham Neubig"
 selected: true
 paperurl: "https://arxiv.org/abs/2511.14945"
+demourl: "https://huggingface.co/spaces/fanduluhf/LSPW"
 excerpt: "Introduces a benchmark for long-term periodic human activity workflows."
 header:
     teaser: Unsupervised.png
 ---
 
-**Authors:** Fan Yang, Quanting Xie, Atsunori Moteki, Shoichi Masui, Shan Jiang, Kanji Uchino, Yonatan Bisk, Graham Neubig
+**Authors:** Fan Yang, **Quanting Xie**, Atsunori Moteki, Shoichi Masui, Shan Jiang, Kanji Uchino, Yonatan Bisk, Graham Neubig
 
 ## Abstract
 
@@ -21,4 +22,5 @@ Periodic human activities with implicit workflows are common in manufacturing, s
 ## Links
 
 - Paper: `https://arxiv.org/abs/2511.14945`
+- Demo: `https://huggingface.co/spaces/fanduluhf/LSPW`
 

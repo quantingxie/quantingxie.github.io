@@ -4,7 +4,7 @@ category: manuscripts
 permalink: /publication/2023-neuralsea/
 date: 2023-12-01
 venue: "In submission"
-authors: "Quanting Xie, Yafei Hu, Vidhi Jain, Jay Patrikar, Nikhil Keetha, Jonathan Francis, Yaqi Xie, Seungchan Kim, Tianyi Zhang, Shibo Zhao, Yu-Quan Chong, Zsolt Kira, Dhruv Batra, Xiaolong Wang, Chen Wang, Matthew Johnson-Roberson, Katia Sycara, Sebastian Scherer, Fei Xia, Yonatan Bisk"
+authors: "**Quanting Xie**, Yafei Hu, Vidhi Jain, Jay Patrikar, Nikhil Keetha, Jonathan Francis, Yaqi Xie, Seungchan Kim, Tianyi Zhang, Shibo Zhao, Yu-Quan Chong, Zsolt Kira, Dhruv Batra, Xiaolong Wang, Chen Wang, Matthew Johnson-Roberson, Katia Sycara, Sebastian Scherer, Fei Xia, Yonatan Bisk"
 selected: true
 paperurl: "https://arxiv.org/abs/2312.08782"
 codeurl: "https://robotics-fm-survey.github.io/"
@@ -14,7 +14,7 @@ header:
   teaser: publications/2023-Survey/scope.png
 ---
 
-**Authors:** Quanting Xie, Yafei Hu, Vidhi Jain, Jay Patrikar, Nikhil Keetha, Jonathan Francis, Yaqi Xie, Seungchan Kim, Tianyi Zhang, Shibo Zhao, Yu-Quan Chong, Zsolt Kira, Dhruv Batra, Xiaolong Wang, Chen Wang, Matthew Johnson-Roberson, Katia Sycara, Sebastian Scherer, Fei Xia, Yonatan Bisk
+**Authors:** **Quanting Xie**, Yafei Hu, Vidhi Jain, Jay Patrikar, Nikhil Keetha, Jonathan Francis, Yaqi Xie, Seungchan Kim, Tianyi Zhang, Shibo Zhao, Yu-Quan Chong, Zsolt Kira, Dhruv Batra, Xiaolong Wang, Chen Wang, Matthew Johnson-Roberson, Katia Sycara, Sebastian Scherer, Fei Xia, Yonatan Bisk
 
 ## Abstract
 
