@@ -1,11 +1,11 @@
 ---
-title: "MM-SeR: Multimodal Self-Refinement for Lightweight Image Captioning"
+title: "M²SeR: Multimodal Self-Refinement for Lightweight Image Captioning"
 category: manuscripts
 permalink: /publication/2025-mm-ser
-date: 2025-08-29
-venue: "arXiv preprint"
+date: 2026-02-20
+venue: "CVPR 2026"
 authors: "Junha Song, Yongsik Jo, So Yeon Min, **Quanting Xie**, Taehwan Kim, Yonatan Bisk, Jaegul Choo"
-selected: false
+selected: true
 paperurl: "https://arxiv.org/abs/2508.21451"
 weburl: "https://sites.google.com/view/junha/mm-ser"
 excerpt: "A lightweight captioning model using multimodal self-refinement."
