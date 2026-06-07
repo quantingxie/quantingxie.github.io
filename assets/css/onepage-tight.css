@@ -1,7 +1,47 @@
 /* Tighten typography for the single-page layout (smaller, denser like default AcademicPages). */
 
+/* ==========================================================================
+   Origami Robotics-inspired palette + typography
+   --cream:#ede8e0  --warm-gray:#d1cbc1  --dark:#1a1815  --mid:#6b6560  --accent:#c4956a
+   Fonts: 'Source Serif 4' (headings)  +  'IBM Plex Mono' (body/UI)
+   ========================================================================== */
+:root {
+  --origami-cream: #ede8e0;
+  --origami-paper: #f2ede5;
+  --origami-warm-gray: #d1cbc1;
+  --origami-dark: #1a1815;
+  --origami-mid: #6b6560;
+  --origami-accent: #c4956a;
+
+  /* Override AcademicPages theme variables */
+  --global-bg-color: var(--origami-cream);
+  --global-footer-bg-color: var(--origami-cream);
+  --global-text-color: var(--origami-dark);
+  --global-text-color-light: var(--origami-mid);
+  --global-base-color: var(--origami-mid);
+  --global-border-color: var(--origami-warm-gray);
+  --global-dark-border-color: var(--origami-warm-gray);
+  --global-link-color: var(--origami-accent);
+  --global-link-color-hover: var(--origami-dark);
+  --global-link-color-visited: var(--origami-accent);
+  --global-code-background-color: rgba(209, 203, 193, 0.18);
+  --global-code-text-color: var(--origami-dark);
+  --global-thead-color: var(--origami-warm-gray);
+  --global-fig-caption-color: var(--origami-mid);
+}
+
 html {
   font-size: 15px;
+  background: var(--origami-cream);
+}
+
+body {
+  background: var(--origami-cream) !important;
+  color: var(--origami-dark);
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (min-width: 64em) {
@@ -13,6 +53,75 @@ html {
 /* Hide template clutter for a minimalist look */
 .masthead, .page__footer, .btn--inverse, .page__title {
   display: none !important;
+}
+
+/* Headings — Source Serif 4 to mirror Origami's hero/section type */
+h1, h2, h3, h4, h5, h6,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  color: var(--origami-dark);
+  letter-spacing: -0.01em;
+}
+
+.page__content h2 {
+  border-bottom: 1px solid var(--origami-warm-gray);
+}
+
+/* Links — warm accent with dark hover */
+a, .page__content a {
+  color: var(--origami-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196, 149, 106, 0.35);
+  transition: color 0.25s, border-color 0.25s;
+}
+a:hover, .page__content a:hover {
+  color: var(--origami-dark);
+  border-bottom-color: var(--origami-dark);
+}
+/* No underlines on author sidebar / nav links */
+.author__urls a,
+.author__name a,
+.nav-list a,
+.research-title a,
+.experience-org a {
+  border-bottom: none;
+}
+
+/* Body / paragraph text */
+.page__content,
+.page__content p,
+.page__content li {
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  font-weight: 300;
+  color: var(--origami-dark);
+}
+
+/* Subtle paper texture on main column */
+#main {
+  background: var(--origami-cream);
+}
+
+/* Sidebar author card on cream */
+.sidebar, .author__avatar, .author__content, .author__urls {
+  background: transparent !important;
+}
+.author__bio {
+  color: var(--origami-mid) !important;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+}
+.author__name {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--origami-dark);
+}
+.author__urls {
+  border-top: 1px solid var(--origami-warm-gray) !important;
 }
 
 #main {
@@ -95,13 +204,33 @@ html {
   line-height: 1.25;
 }
 
+.research-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
 .research-title a {
-  color: #0056b3;
+  color: var(--origami-dark);
   text-decoration: none;
+  border-bottom: none;
+  transition: color 0.25s;
 }
 
 .research-title a:hover {
-  text-decoration: underline;
+  color: var(--origami-accent);
+  text-decoration: none;
+}
+
+.research-venue {
+  color: var(--origami-mid);
+}
+
+.research-links a {
+  color: var(--origami-accent) !important;
+  border-bottom: 1px solid rgba(196, 149, 106, 0.35);
+}
+.research-links a:hover {
+  color: var(--origami-dark) !important;
+  border-bottom-color: var(--origami-dark);
 }
 
 .research-authors {
@@ -149,20 +278,32 @@ html {
 }
 
 .experience-org {
+  font-family: 'Source Serif 4', Georgia, serif;
   font-weight: 600;
   font-size: 1.05rem;
-  color: #0056b3;
+  color: var(--origami-dark);
+}
+.experience-org a {
+  color: var(--origami-dark);
+  border-bottom: none;
+  transition: color 0.25s;
+}
+.experience-org a:hover {
+  color: var(--origami-accent);
 }
 
 .experience-location {
-  color: #666;
+  color: var(--origami-mid);
   font-size: 0.95rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
 }
 
 .experience-role-time {
   font-style: italic;
-  color: #444;
+  color: var(--origami-mid);
   margin-top: 0.1rem;
+  font-family: 'Source Serif 4', Georgia, serif;
 }
 
 .experience-icon {

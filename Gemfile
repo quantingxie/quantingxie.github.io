@@ -11,3 +11,9 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+# Ruby 3.4+ stdlib gems no longer bundled by default
+gem 'csv', '~> 3.2.0'
+gem 'base64'
+gem 'bigdecimal'
+gem 'logger'
