@@ -31,7 +31,7 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
   background: var(--origami-cream);
 }
 
@@ -40,13 +40,15 @@ body {
   color: var(--origami-dark);
   font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
   font-weight: 300;
+  font-size: 0.82rem;        /* ~13px — matches Origami's body scale */
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @media (min-width: 64em) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -99,7 +101,23 @@ a:hover, .page__content a:hover {
 .page__content li {
   font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
   font-weight: 300;
+  font-size: 0.82rem;        /* ~13px */
+  line-height: 1.85;
   color: var(--origami-dark);
+}
+
+/* Heading scale closer to Origami's section titles */
+.page__content h2 {
+  font-size: 1.5rem;         /* 24px */
+  font-weight: 400;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+}
+.page__content h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-top: 1.4rem;
 }
 
 /* Subtle paper texture on main column */
@@ -129,6 +147,17 @@ a:hover, .page__content a:hover {
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem; /* Shifts the left column to the right slightly */
+}
+
+/* Add breathing room between sidebar and content column */
+.archive {
+  padding-left: 3rem;
+}
+
+@media (max-width: 768px) {
+  .archive {
+    padding-left: 0;
+  }
 }
 
 .page__content {
@@ -280,7 +309,7 @@ a:hover, .page__content a:hover {
 .experience-org {
   font-family: 'Source Serif 4', Georgia, serif;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--origami-dark);
 }
 .experience-org a {
@@ -294,15 +323,17 @@ a:hover, .page__content a:hover {
 
 .experience-location {
   color: var(--origami-mid);
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 300;
+  letter-spacing: 0.03em;
 }
 
 .experience-role-time {
   font-style: italic;
   color: var(--origami-mid);
   margin-top: 0.1rem;
+  font-size: 0.85rem;
   font-family: 'Source Serif 4', Georgia, serif;
 }
 
